@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@300;400;500&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+
+}
+.side-nav{
+    position: absolute;
+    top:0;
+    z-index: 1000;
+}
+.side-nav-scroll{
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #00000020;
+    animation: toShow .4s linear;
+
+}
+@keyframes toShow {
+    from{
+        transform: translateY(-5px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+.navbar-toggler{
+    border: none    ;
+}
+.navbar-collapse .white{
+    color: #fff !important;
+}
+.navbar-collapse .black{
+    color: #000 !important;
+}
+.navbar-toggler:focus{
+    outline: none;
+}
+.side-nav
+.side-logo{
+    width: 150px;
+}
+
+.home{
+    background-image: url('../img/bg-shape.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%;
+    position: relative;
+}
+.home .scroll-next{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+.social-v{
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.about-text{
+    background-image: url("../img/bg-2.svg");
+    background-size: 100%;
+}
+.about{
+    background-color: #7e76f910;
+   
+}
+.services{
+    background-image: url('../img/bg-3.svg');
+}
+.services .card{
+    border-radius: 35px !important;
+    border: none;
+}
+.services-card-text{
+    height: 170px;
+}
+.pricing{
+    background-color: #7e76f910;
+}
+.current-section{
+    border-radius: 50px;
+    /* padding: .5rem 5rem; */
+    border: 3px solid #7e76f9;
+    box-shadow: 0 5px #00000008;
+}
+.slick-dots{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent;
+    border: 2px solid #7e76f9;
+    border-radius: 50%;
+}
+.slick-dots li.slick-active{
+    width: 20px !important;
+    height: 20px !important;
+    background-color: #7e76f9;
+    border-radius: 50%;
+}
+footer{
+    background-image: url('../img/footer-1.svg'),url('../img/footer-2.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding:150px 0px 20px 0px;
+}
+.ani-delay-1{
+    animation-delay: .5s;
+}
+.ani-delay-2{
+    animation-delay: 1s;
+}
+.ani-delay-3{
+    animation-delay: 1.5s;
+}
+.ani-delay-4{
+    animation-delay: 2s;
+}
+.social-v i{
+    transition: all .5s;
+}
+.social-v i:hover{
+    transform: scale(1.3);
+}
+.pricing-slick .card:hover{
+    transition: all .5s;
+}
+.pricing-slick .card:hover{
+    transform: scale(1.02);
+}
+.contact .social i{
+    transition: all .5s;
+}
+.contact .social i:hover{
+    transform: scale(1.2);
+}
+@media screen  and (max-width:1200px){
+    footer{
+        background-image: url('../img/footer-1.svg'),url('../img/footer-2.svg');
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        padding:130px 0px 20px 0px;
+    }
+}
+@media screen and (max-width:768px) {
+    .nav-item .nav-link{
+        padding: .5rem .6rem; 
+        background-color: #fff;
+        margin-top: 1rem;
+        box-shadow: 0 5px #00000015;
+    }
+    footer{
+        background-size: cover;
+        background-position: center;
+    }
+    .side-nav{
+        background-color: #ffffffee;
+        backdrop-filter: blur;
+    }
+}
+@media screen and (max-width:576px){
+    .about img{
+        width: 100% !important;
+    }
+    .about-text div{
+        width: 100% !important;
+    }
+    .home .scroll-next {
+        display: none;
+    }
+    .home .social-v {
+        display: none;
+    }
+    .side-nav{
+        background-color: #ffffffee;
+        backdrop-filter: blur;
+    }
+    
+    .nav-item .nav-link{
+        padding: .5rem 3rem; 
+        background-color: #fff;
+        margin-top: 8px;
+       
+        box-shadow: 0 5px #00000015;
+    }
+    
+}
